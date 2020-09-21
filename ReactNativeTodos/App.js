@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, TextInput, View, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, TextInput, View, Text, ScrollView} from 'react-native';
 
 const App = () => {
   return (
@@ -7,6 +7,9 @@ const App = () => {
       <Text style={styles.appTitle}>Hello Todo List</Text>
       <View style={styles.card}>
         <TextInput style={styles.input} placeholder="Add an item!" />
+        <ScrollView>
+          <Text>TodoList</Text>
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
@@ -40,7 +43,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     fontSize: 24,
     marginLeft: 20,
-  }
+  },
 });
 
 export default App;

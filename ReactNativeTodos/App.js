@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 import {SafeAreaView, StyleSheet, TextInput, View, Text, ScrollView} from 'react-native';
 
 const App = () => {
+  //  todos: {id: Number, textValue: string, checked: boolean }
+  const [todos, setTodos] = useState([]);
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello Todolist</Text>

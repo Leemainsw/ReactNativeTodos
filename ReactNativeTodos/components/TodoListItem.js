@@ -8,9 +8,9 @@ const TodoListItem = () => {
         <View style={styles.container}>
             <TouchableOpacity>
                 <View style={styles.completeCircle}>
-                    <Text style={styles.buttonText}>
-                        <Icon theme={{ iconFamily: 'AntDesign' }} name='circledowno' size={30} color="#3143e8"/>
-                    </Text>
+                <View style={styles.completeCircle}>
+                    <Icon name="circledowno" size={30} color="#3143e8" />
+                </View>
                 </View>
             </TouchableOpacity>
             <Text style={[styles.text, styles.strikeText]}>
@@ -18,7 +18,7 @@ const TodoListItem = () => {
             </Text>
             <TouchableOpacity style={styles.buttonContainer}>
                 <Text style={styles.buttonText}>
-                    <Icon theme={{ iconFamily: 'AntDesign' }} name="delete" size={30} color="#e33057" />
+                    <Icon name="delete" size={30} color="#e33057" />
                 </Text>
             </TouchableOpacity>
         </View>

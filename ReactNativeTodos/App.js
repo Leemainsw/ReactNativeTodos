@@ -6,12 +6,22 @@ import {SafeAreaView, StyleSheet, TextInput, View, Text, ScrollView} from 'react
 const App = () => {
   //  todos: {id: Number, textValue: string, checked: boolean }
   const [todos, setTodos] = useState([]);
+
+  const addTodo = text => {
+    setTodos([
+      ...todos,
+      {id: Math.random().toString(), textValue: text, checked: false},
+    ]);
+  };
+  
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello Todolist</Text>
       <View style={styles.card}>
-        <TodoInsert />
-        <TodoList />
+        {/* <TodoInsert /> */}
+        <TodoInsert onAddTodo={addTodo} />
+        {/* <TodoList /> */}
+        <TodoList todos={todos} />
       </View>
     </SafeAreaView>
   );

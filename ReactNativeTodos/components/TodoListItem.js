@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
-    const TodoListItem = ({textValue, id, checked}) => {
+    const TodoListItem = ({textValue, id, checked, onRemove}) => {
         return (
             <View style={styles.container}>
                 <TouchableOpacity>
@@ -15,7 +15,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
                 </TouchableOpacity>
                 <Text style={[styles.text, styles.strikeText]}>{textValue}</Text>
                 <TouchableOpacity style={styles.buttonContainer}>
-                    <Text style={styles.buttonText}>
+                    <Text style={styles.buttonText} onPress={onRemove(id)}>
                         <Icon name="delete" size={30} color="#e33057" />
                     </Text>
                 </TouchableOpacity>
